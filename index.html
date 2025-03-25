@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <img src="bg2.jpg" class="bg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>  <!-- Page title -->
+    <link rel="stylesheet" href="Styles.css">  <!-- Linking external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Task Manager Section -->
+        <div class="task-container">
+            <h1>Task Manager</h1>
+            <!-- Input fields for adding tasks -->
+            <div class="task-input">
+                <input type="text" id="taskName" placeholder="Task Name">
+                <input type="text" id="taskDesc" placeholder="Task Description">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+
+            <!-- Task filter buttons -->
+            <div class="filters">
+                <button onclick="filterTasks('all')">All</button>
+                <button onclick="filterTasks('pending')">Pending</button>
+                <button onclick="filterTasks('completed')">Completed</button>
+            </div>            
+
+            <ul id="taskList"></ul>
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="calendar-container">
+            <h1>Calendar</h1>
+            <!-- Calendar navigation -->
+            <div class="calendar-header">
+                <button onclick="prevMonth()">❮</button>
+                <span id="month-year"></span>
+                <button onclick="nextMonth()">❯</button>
+            </div>
+            <!-- Calendar display area -->
+            <div id="calendar"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>  <!-- Linking external JavaScript file -->
+    
+    <!-- Inline CSS for font styling -->
+    <style>
+        body {
+          font-family: 'Dancing Script', cursive;
+        }
+      </style>
+</body>
+</html>
